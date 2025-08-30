@@ -72,11 +72,6 @@ Fork of the original otp-authenticator-webapp by qoomon: https://qoomon.github.i
 
 ### Deployment Options
 
-#### Docker
-```bash
-docker run -d -p 8080:80 ghcr.io/YOUR_USERNAME/otp-authplus-webapp:latest
-```
-
 #### Static Files
 Download the latest `otp-authplus-dist.zip` from the [Releases](../../releases) page and serve with any web server.
 
@@ -85,4 +80,10 @@ Download the latest `otp-authplus-dist.zip` from the [Releases](../../releases) 
 npm ci
 npm run build
 # Serve the dist/ directory with any web server
+```
+
+#### Docker (Local Build)
+```bash
+docker build -t otp-authplus .
+docker run -d -p 8080:80 otp-authplus
 ```
